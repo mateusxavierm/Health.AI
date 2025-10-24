@@ -73,7 +73,7 @@ def home():
     # Se o usuário já estiver logado, redireciona diretamente para o chat
     if 'user_email' in session:
         return redirect(url_for('chat'))
-    # Se não estiver logado, renderiza a tela inicial (start.html)
+    # Se não estiver logado, renderiza a tela inicial (index.html)
     return render_template('start.html')
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -265,3 +265,4 @@ def logout():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
